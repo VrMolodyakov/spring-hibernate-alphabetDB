@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+
+
+  <title>Getting Started: Handing Form Submission</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+
+  <style>
+table td{
+vertical-align:top;
+border:solid 1px #888;
+padding:10px;
+}
+
+    </style>
+</head>
+<body>
+<h1>Error Page</h1>
+<table>
+
+  <tr>
+    <td>Error</td>
+    <td th:text="${myerror}"/>
+  </tr>
+  <tr>
+    <td>Message</td>
+    <td th:text="${message}"/>
+  </tr>
+  <tr>
+    <td>Exception</td>
+    <td th:text="${exception}"/>
+  </tr>
+
+</table>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Loop</title>
+    <style>table th, table td {padding: 5px;}</style>
+</head>
+
+<body>
+<h1>Texts</h1>
+
+<table border="1">
+    <tr>
+        <th> id </th>
+        <th> parent_id </th>
+        <th> name </th>
+        <th> operation </th>
+    </tr>
+    <tbody>
+    <tr th:if="${texts.empty}">
+        <td colspan="2"> No Books Available </td>
+    </tr>
+    <tr th:each="text : ${texts}">
+        <td><span th:text="${text.id}"> id </span></td>
+        <td><span th:text="${text.parent_id} ?: 'оригинал'"></span></td>
+        <td><span th:text="${text.name}"> name </span></td>
+        <td><span th:text="${text.operation}"> operation </span></td>
+    </tr>
+    </tbody>
+
+</table>
+
+</body>
+
+</html>
